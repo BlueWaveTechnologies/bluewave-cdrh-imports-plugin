@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin name="CDRH Imports Dashboard">
+
+  <webapp>
+
+    <includes>
+
+      <script src="app/dashboards/cdrh/ImportSummary.js" type="text/javascript"></script>
+      <script src="app/dashboards/cdrh/GlobalSupplyChain.js" type="text/javascript"></script>
+      <script src="app/dashboards/cdrh/PortsOfEntry.js" type="text/javascript"></script>
+      <script src="app/dashboards/cdrh/CompanyProfile.js" type="text/javascript"></script>
+
+      <link href="style/cdrh-imports.css" type="text/css" rel="stylesheet" />
+
+    </includes>
+
+
+    <dashboards>
+
+      <dashboard name="Supply Chain Dashboard" class="bluewave.dashboards.cdrh.GlobalSupplyChain"/>
+      <dashboard name="Import Summary" class="bluewave.dashboards.cdrh.ImportSummary"/>
+
+    </dashboards>
+
+  </webapp>
+
+
+  <webservices>
+    <service endpoint="import" class="bluewave.web.services.cdrh.ImportService"/>
+  </webservices>
+
+
+  <main>
+    <load arg="Imports" class="bluewave.data.cdrh.Imports" method="load"/>
+
+
+    <load arg="Ports" class="bluewave.data.cdrh.Ports" method="loadUSPortsofEntry"/>
+    <download arg="Ports" class="bluewave.data.cdrh.Ports" method="downloadUSPortsofEntry"/>
+  </main>
+
+</plugin>
