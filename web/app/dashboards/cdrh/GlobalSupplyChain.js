@@ -1062,9 +1062,13 @@ var smoothingType = "movingAverage";
             map.addPolygons(countries.features, {
                 name: "countries",
                 style: {
-                    fill: "#f8f8f8",
-                    stroke: "#ccc"
+                    fill: "#dedde0",
+                    stroke: "#f8f8f8"
                 }
+//                style: {
+//                    fill: "#f8f8f8",
+//                    stroke: "#ccc"
+//                }
             });
 
 
@@ -1481,7 +1485,7 @@ var smoothingType = "movingAverage";
                 resizable: true
             });
 
-            importSummary = new bluewave.dashboards.ImportSummary(win.getBody(), config);
+            importSummary = new bluewave.dashboards.cdrh.ImportSummary(win.getBody(), config);
             importSummary.show = function(){
                 win.show();
             };
