@@ -120,6 +120,11 @@
                           <fileset dir="${project.basedir}/web" />
                       </copy>
 
+                      <!-- Copy /queries to /dist -->
+                      <copy todir="${project.basedir}/dist/queries" >
+                          <fileset dir="${project.basedir}/queries" />
+                      </copy>
+
                     </target>
                   </configuration>
                   <goals>
