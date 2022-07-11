@@ -17,8 +17,23 @@
 
     <dashboards>
 
-      <dashboard name="Supply Chain Dashboard" class="bluewave.dashboards.cdrh.GlobalSupplyChain"/>
+      <dashboard name="International Supply Chain" class="bluewave.dashboards.cdrh.GlobalSupplyChain">
+        <info>
+          <description>
+            <![CDATA[
+            Maps and charts illustrating shipments of medical devices from foreign manufacturers
+            and distributors into the United States.
+
+            Sources include Imports data from ORA and Registration & Listing data from CDRH
+            ]]>
+          </description>
+        </info>
+        <thumbnail src="images/ship.jpg"></thumbnail>
+      </dashboard>
+
+      <!--
       <dashboard name="Import Summary" class="bluewave.dashboards.cdrh.ImportSummary"/>
+      -->
 
     </dashboards>
 
