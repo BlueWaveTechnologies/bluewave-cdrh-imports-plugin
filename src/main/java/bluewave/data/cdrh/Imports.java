@@ -196,9 +196,8 @@ public class Imports {
                 String uniqueKey = json.get("entry").toString() + "_" + json.get("doc").toString() + "_" + json.get("line").toString();
                 params.put("unique_key", uniqueKey);
 
-                Iterator<String> it = json.keys();
-                while (it.hasNext()){
-                    String key = it.next();
+
+                for (String key : json.keySet()){
                     JSONValue val = json.get(key);
                     if (val.isNull()){
                         params.put(key, null);

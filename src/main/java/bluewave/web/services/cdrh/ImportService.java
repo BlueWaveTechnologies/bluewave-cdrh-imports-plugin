@@ -707,9 +707,8 @@ public class ImportService extends WebService {
                 Long nodeID = record.get("id").asLong();
                 JSONObject entry = getJson(record.get("line"));
                 entries.put(nodeID, entry);
-                Iterator<String> it = entry.keys();
-                while (it.hasNext()){
-                    header.add(it.next());
+                for (String key : entry.keySet()){
+                    header.add(key);
                 }
             }
 
